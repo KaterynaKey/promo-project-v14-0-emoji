@@ -40,21 +40,17 @@ function linksStyles(htmlContent) {
     return htmlContent;
 }
 
-//------------Emoji--------------
+
 
 function replaceAllEmojisAndSymbolsExcludingHTML(htmlContent) {
-    const rx = /(?:\p{Extended_Pictographic}|(?![<>=&%"'#;:_-])\p{S})(?:\uFE0F)?/gu;
+    const rx = /(?:\p{Extended_Pictographic}|(?![<>=&%"'#;:_-])[\p{S}\p{No}])(?:\uFE0F)?/gu;
 
-    htmlContent = htmlContent.replace(rx, match => {
+    return htmlContent.replace(rx, match => {
         return Array.from(match)
             .map(ch => `&#${ch.codePointAt(0)};`)
             .join('');
     });
-
-    return htmlContent;
 }
-//------------Emoji-end--------------
-
 
 function processStyles(htmlContent) {
     htmlContent = htmlContent.replace(/<b[^>]*>/gi, '').replace(/<\/b>/gi, '');
