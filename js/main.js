@@ -514,7 +514,7 @@ function wrapButtonMjml(htmlContent) {
                       </td>
                     </tr>
                     <tr>
-                      <td align="center" style="font-size:0px;padding:10px 25px;padding-top:12px;padding-right:18px;padding-bottom:12px;padding-left:18px;word-break:break-word;">
+                      <td align="center" style="font-size:0px;padding:10px 25px; word-break:break-word;">
                         <table cellpadding="0" cellspacing="0" role="presentation">
                           <tr>
                               <td height="51" align="center" style="border-radius: 10px;font-family:'Roboto', Arial, Helvetica, sans-serif;font-size:18px;font-style:normal;line-height:1.5;text-align:center;font-weight: bold; color: #FFFFFF; padding: 3px 5px; background-color: #28b628;" bgcolor="#28b628">
